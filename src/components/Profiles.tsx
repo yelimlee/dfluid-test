@@ -36,11 +36,7 @@ function Profiles() {
                 <Text
                   typography="t3"
                   fontFamily="Montserrat"
-                  style={{
-                    whiteSpace: 'pre-line',
-                    wordBreak: 'keep-all',
-                    maxWidth: '480px',
-                  }}
+                  style={{ maxWidth: '480px' }}
                 >
                   {profile.content}
                 </Text>

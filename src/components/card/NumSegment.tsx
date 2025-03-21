@@ -8,13 +8,13 @@ const options = [1000, 1500, 2000, 2500]
 function NumSegment({ onSet }: { onSet: (values: number[]) => void }) {
   const [values, setValues] = useState([options[0], options[2]])
 
-  const snapToNearest = (val: any) => {
+  const snapToNearest = (val: number) => {
     return options.reduce((prev, curr) =>
       Math.abs(curr - val) < Math.abs(prev - val) ? curr : prev,
     )
   }
 
-  const handleValue = (newValues: any) => {
+  const handleValue = (newValues: number[]) => {
     setValues(newValues.map(snapToNearest))
     onSet(newValues.map(snapToNearest))
   }
@@ -69,7 +69,7 @@ function NumSegment({ onSet }: { onSet: (values: number[]) => void }) {
                   <span
                     style={{
                       fontFamily: `'Exo 2', sans-serif`,
-                      transform: `translateY(1px)`,
+                      transform: `translateY(0.5px)`,
                     }}
                   >
                     {option}
@@ -83,6 +83,7 @@ function NumSegment({ onSet }: { onSet: (values: number[]) => void }) {
         renderThumb={({ props, index }) => (
           <div
             {...props}
+            key={index}
             style={{
               ...props.style,
               height: '42px',
@@ -115,10 +116,13 @@ function NumSegment({ onSet }: { onSet: (values: number[]) => void }) {
 const numSegmentContainer = css`
   display: flex;
   align-items: center;
+  height: 56px;
+  max-height: 56px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   overflow: hidden;
-  padding: 5px 26px;
+  padding: 0 26px;
+  box-sizing: border-box;
 `
 
 export default NumSegment

@@ -50,10 +50,10 @@ function CardItem({ cards }: { cards: Card[] }) {
 }
 
 const ListStyled = css`
-  overflow-x: scroll;
   max-width: 1600px;
   width: 1600px;
   min-width: 1600px;
+  overflow-x: scroll;
   padding-right: 20px;
   &::-webkit-scrollbar {
     display: none;

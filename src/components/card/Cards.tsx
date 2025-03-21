@@ -17,8 +17,6 @@ function Cards() {
 
   const filterCards = () => {
     return cards.filter((card) => {
-      console.log('뭘까?', filterCriteria.range)
-
       const isWithinRange =
         filterCriteria.range[0] <= card.value &&
         filterCriteria.range[1] >= card.value
@@ -75,16 +73,16 @@ function Cards() {
 }
 
 const containerStyles = css`
-  padding-top: 120px;
-  padding-left: 80px;
-  padding-bottom: 80px;
-  max-width: 1600px;
-  width: 100%;
-  min-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 1600px;
+  width: 100%;
+  min-width: 1200px;
+  padding-top: 120px;
+  padding-left: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto;
   overflow-x: auto;
 `
 

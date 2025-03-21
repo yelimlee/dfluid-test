@@ -3,7 +3,7 @@ export const profiles = [
     profileImage: '../assets/sample/profile1.png',
     title: 'Sed ut perspiciatis',
     content:
-      'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.',
+      'Nemo enim ipsam voluptatem quia voluptas sit aspenatur aut odit aut fugit, sed quia conseqntur magni dolores eos qui ratione voluptatem.',
   },
   {
     profileImage: '../assets/sample/profile2.png',

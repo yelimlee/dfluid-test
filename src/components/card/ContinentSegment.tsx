@@ -30,16 +30,15 @@ const ContinentSegment = ({ onSet }: { onSet: (value: string) => void }) => {
 const segmentContainer = css`
   display: flex;
   gap: 5px;
+  width: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   overflow: hidden;
-  width: fit-content;
   padding: 5px;
 `
 
 const segmentItem = (active: boolean) => css`
   padding: 0 20px;
-  height: 40px;
   cursor: pointer;
   background: ${active ? `${colors.black}` : `${colors.white}`};
   color: ${active ? `${colors.white}` : `${colors.black}`};
